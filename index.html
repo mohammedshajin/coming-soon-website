@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+        <meta charset="UTF-8">
+	<title>Map Location Highlight Only CSS</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+		}
+		.map{
+			background-color: #3781cc;
+			position: relative;
+            height: 100vh;
+            display: flex;
+		}
+		.map img{
+			opacity: .2;
+            width: 100%;
+            object-fit: cover;
+            
+		}
+		.map span{
+			position: absolute;
+			width: 15px;
+			height: 15px;
+			border-radius: 50px;
+			top: 50%;
+			left: 20%;
+			background-color: #fff;
+
+			/*Now i create highlight animation*/
+			animation: highlight 1.5s linear infinite;
+		}
+
+		@keyframes highlight{
+			100%{
+				transform: scale(5);
+				opacity: 0;
+			}
+		}
+		
+
+		/*Same thing i set different location*/
+		.map .marker2{
+			left: 70%;
+			top: 20%;
+			animation-delay: .5s;
+		}
+		.map .marker3{
+			left: 50%;
+			top: 70%;
+			animation-delay: 1s;
+		}
+		.map .marker4{
+			left: 10%;
+			top: 30%;
+			animation-delay: .7s;
+		}
+		.map .marker5{
+			left: 68%;
+			top: 25%;
+			animation-delay: 1s;
+		}
+		.map .marker6{
+			left: 80%;
+			top: 30%;
+		}
+		
+		/*You can also add loation name*/
+	</style>
+</head>
+<body>
+
+
+<div class="map">
+	<img src="map.png">
+	<span class="marker1"></span>
+	<span class="marker2"></span>
+	<span class="marker3"></span>
+	<span class="marker4"></span>
+	<span class="marker5"></span>
+	<span class="marker6"></span>
+</div>
+
+        
+        <div class="middle">
+            <img src="/egc-white.png" width="300px" alt="">
+          <h1>COMING SOON</h1>
+          <br>
+          <hr>
+          <br>
+          <div id="countdown"></div>
+        </div>
+      
+     
+      <script src="/script.js"></script>
+</body>
+</html>
